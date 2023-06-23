@@ -9,7 +9,7 @@ AvatarCache = {}
     --TriggerEvent("eyes-ban", source, 'Your ban reason', 1)
 --end)
 
-RegisterServerEvent('eyes-ban')
+--RegisterServerEvent('eyes-ban')
 AddEventHandler('eyes-ban', function(source, reason, time)
     banPlayer(source, "Your ban reason", 1)
 end)
