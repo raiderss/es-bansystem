@@ -62,12 +62,17 @@ end)
 
 
 function banPlayer(source, reason, duration)
+    if source == nil then 
+        return 
+    end
+    if source ~= -1 then
     local identifier = GetPlayerIdentifier(source)
     local expiry = os.time() + (duration * 3600)
     banList[identifier] = {reason = reason, expiry = expiry}
     SaveResourceFile(GetCurrentResourceName(), "banlist.json", json.encode(banList), -1)
     EYESLOG(source, 'Your ban reason', 1)
     DropPlayer(source, reason)
+    end
 end
 
 
