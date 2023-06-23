@@ -5,9 +5,9 @@ Framework = GetFramework()
 Citizen.Await(Framework)
 AvatarCache = {}
 
-RegisterCommand("ban", function(source)
-    TriggerEvent("eyes-ban", source, 'Your ban reason', 1)
-end)
+--RegisterCommand("ban", function(source)
+    --TriggerEvent("eyes-ban", source, 'Your ban reason', 1)
+--end)
 
 RegisterServerEvent('eyes-ban')
 AddEventHandler('eyes-ban', function(source, reason, time)
